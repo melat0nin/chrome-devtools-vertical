@@ -1,0 +1,17 @@
+#-webkit-web-inspector .source-code {
+  left: auto;
+	right: auto;
+	width: 100% !important;
+	height: 50%;
+}
+
+#-webkit-web-inspector .split-view-sidebar-right {
+	left: auto;
+	right: auto;
+	width: 100% !important;
+	height: 50%;
+}
+
+#-webkit-web-inspector .split-view-contents {
+	position: static !important;
+}
