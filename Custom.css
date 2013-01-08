@@ -10,6 +10,7 @@
 	right: auto;
 	width: 100% !important;
 	height: 50%;
+	border-top: 1px solid #ccc;
 }
 
 #-webkit-web-inspector .split-view-contents {
