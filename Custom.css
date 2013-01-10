@@ -1,18 +1,113 @@
-#-webkit-web-inspector .elements .source-code {
-  left: auto;
-	right: auto;
-	width: 100% !important;
-	height: 50%;
+/* "Elements" panel optimized for vertical layout */
+/* left column (DOM) */
+#main-panels .elements .source-code {
+    left: auto;
+    right: auto;
+    width: 100% !important;
+    height: 70%;
 }
 
-#-webkit-web-inspector .elements .split-view-sidebar-right {
-	left: auto;
-	right: auto;
-	width: 100% !important;
-	height: 50%;
-	border-top: 1px solid #ccc;
+/* right column (CSS) */
+#main-panels .elements .split-view-sidebar-right {
+    left: auto;
+    right: auto;
+    width: 100% !important;
+    height: 30%;
 }
 
-#-webkit-web-inspector .elements .split-view-contents {
-	position: static !important;
+#main-panels .elements .split-view-contents {
+    position: relative !important;
+}
+
+#main-panels .elements .split-view-resizer {
+    display: none;
+}
+
+/* "Scripts" panel optimized for vertical layout:
+ * In the default layout, the panel has 3 columns A, B, C, organized as follows:
+ * ,-----------.
+ * \___________\___
+ * |   |       |   |
+ * | A |   B   | C |
+ * |___|_______|___|
+ * `-----------'
+ *
+ * The dotted border indicates the DOM hierarchy:
+ *
+ * <div>
+ *   <div>
+ *     <!-- column A -->
+ *     <!-- column B -->
+ *   </div>
+ *   <!-- column C -->
+ * </div>
+ *
+ * We need to reorganize them so that B appears on top, and A and C share the bottom half:
+ *  _______
+ * |       |
+ * |       |
+ * |   B   |
+ * |       |
+ * |_______|
+ * |   |   |
+ * | A | C |
+ * |___|___|
+ */
+
+/* wrapper containing A and B: (A B) */
+#scripts-split-view > .split-view-contents:first-child {
+    width: 100%;
+}
+
+/* column A (when pinned) */
+#scripts-split-view > .split-view-contents:first-child > .split-view > .split-view-sidebar-left {
+    left: 0px;
+    top: 70% !important;
+    width: 50% !important;
+    z-index: 10;
+    background-color: white;
+}
+
+/* column A (when overlayed, i.e., when NOT pinned) */
+#scripts-split-view > .split-view-contents:first-child > .split-view > .sidebar-overlay {
+    top: 70% !important;
+}
+
+/* get rid of split view resizer between columns A and B */
+#scripts-split-view > .split-view-contents:first-child > .split-view > .split-view-resizer {
+    display: none;
+}
+
+/* column B */
+#scripts-split-view > .split-view-contents:first-child > .split-view > .split-view-contents:nth-child(2) {
+    left: 0px !important;
+    height: 70%;
+    position: static !important; /* needed for correctly positioning column A's show / hide button later on */
+    border-bottom: 1px solid #888;
+}
+
+/* column C */
+#scripts-split-view > .split-view-sidebar-right {
+    right: 0px;
+    top: 70% !important;
+    width: 50% !important;
+    background-color: white;
+}
+
+/* reposition the buttons for showing / hiding / resizing the sidebars */
+#scripts-split-view .scripts-debugger-show-hide-button,
+#scripts-split-view .scripts-navigator-show-hide-button,
+#scripts-debug-sidebar-resizer-widget {
+    top: 70% !important;
+    z-index: 20 !important;
+}
+
+#scripts-editor-container-tabbed-pane > .scripts-navigator-show-hide-button {
+    left: auto !important;
+    right: 50% !important;
+    margin-right: 20px !important;
+}
+
+#scripts-split-view .sidebar-overlay .navigator-tabbed-pane .scripts-navigator-show-hide-button {
+    top: 0 !important;
 }
