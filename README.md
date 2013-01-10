@@ -7,6 +7,11 @@ A Custom.css stylesheet for Chrome/Chromium which alters the layout of Devtools 
 
 Firebug allows this layout by default and it's very useful on widescreen monitors; Devtools doesn't yet have the option so this is intended as an interim solution.
 
+Wait, how do I dock Devtools vertically in the first place?
+-----------------------------------------------------------
+
+The option to dock vertically is completely hidden away owing to a poor UI decision: to access it, you must _long-press_ the Dock button on the very bottom-left corner of Devtools.
+
 Installation:
 -------------
 
