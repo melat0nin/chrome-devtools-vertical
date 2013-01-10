@@ -113,3 +113,26 @@
 #scripts-split-view .sidebar-overlay .navigator-tabbed-pane .scripts-navigator-show-hide-button {
     top: 0 !important;
 }
+
+
+
+/* 
+ * Network panel 
+ */
+#main-panels .network .split-view-sidebar-left {
+    position: static;
+	width: 100% !important;
+	height: 50% !important;
+}
+
+#main-panels .network .split-view-sidebar-left.maximized {
+	height: 100% !important;
+}
+
+#main-panels #network-views {
+	position: static;
+	left: 0 !important;
+	top: 50% !important;
+	width: 100%;
+	height: 50% !important;
+}
