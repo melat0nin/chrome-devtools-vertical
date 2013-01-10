@@ -1,6 +1,6 @@
 /* "Elements" panel optimized for vertical layout */
 /* left column (DOM) */
-#main-panels .elements .source-code {
+#-webkit-web-inspector.dock-to-right:not(.detached) .elements .source-code {
     left: auto;
     right: auto;
     width: 100% !important;
@@ -9,7 +9,7 @@
 }
 
 /* right column (CSS) */
-#main-panels .elements .split-view-sidebar-right {
+#-webkit-web-inspector.dock-to-right:not(.detached) .elements .split-view-sidebar-right {
     left: auto;
     right: auto;
     width: 100% !important;
@@ -17,11 +17,11 @@
     border-top: 1px solid #ccc;
 }
 
-#main-panels .elements .split-view-contents {
+#-webkit-web-inspector.dock-to-right:not(.detached) .elements .split-view-contents {
     position: relative !important;
 }
 
-#main-panels .elements .split-view-resizer {
+#-webkit-web-inspector.dock-to-right:not(.detached) .elements .split-view-resizer {
     display: none;
 }
 
@@ -57,12 +57,12 @@
  */
 
 /* wrapper containing A and B: (A B) */
-#scripts-split-view > .split-view-contents:first-child {
+#-webkit-web-inspector.dock-to-right:not(.detached) #scripts-split-view > .split-view-contents:first-child {
     width: 100%;
 }
 
 /* column A (when pinned) */
-#scripts-split-view > .split-view-contents:first-child > .split-view > .split-view-sidebar-left {
+#-webkit-web-inspector.dock-to-right:not(.detached) #scripts-split-view > .split-view-contents:first-child > .split-view > .split-view-sidebar-left {
     left: 0px;
     top: 70% !important;
     width: 50% !important;
@@ -71,17 +71,17 @@
 }
 
 /* column A (when overlayed, i.e., when NOT pinned) */
-#scripts-split-view > .split-view-contents:first-child > .split-view > .sidebar-overlay {
+#-webkit-web-inspector.dock-to-right:not(.detached) #scripts-split-view > .split-view-contents:first-child > .split-view > .sidebar-overlay {
     top: 70% !important;
 }
 
 /* get rid of split view resizer between columns A and B */
-#scripts-split-view > .split-view-contents:first-child > .split-view > .split-view-resizer {
+#-webkit-web-inspector.dock-to-right:not(.detached) #scripts-split-view > .split-view-contents:first-child > .split-view > .split-view-resizer {
     display: none;
 }
 
 /* column B */
-#scripts-split-view > .split-view-contents:first-child > .split-view > .split-view-contents:nth-child(2) {
+#-webkit-web-inspector.dock-to-right:not(.detached) #scripts-split-view > .split-view-contents:first-child > .split-view > .split-view-contents:nth-child(2) {
     left: 0px !important;
     height: 70%;
     position: static !important; /* needed for correctly positioning column A's show / hide button later on */
@@ -89,7 +89,7 @@
 }
 
 /* column C */
-#scripts-split-view > .split-view-sidebar-right {
+#-webkit-web-inspector.dock-to-right:not(.detached) #scripts-split-view > .split-view-sidebar-right {
     right: 0px;
     top: 70% !important;
     width: 50% !important;
@@ -97,42 +97,42 @@
 }
 
 /* reposition the buttons for showing / hiding / resizing the sidebars */
-#scripts-split-view .scripts-debugger-show-hide-button,
-#scripts-split-view .scripts-navigator-show-hide-button,
-#scripts-debug-sidebar-resizer-widget {
+#-webkit-web-inspector.dock-to-right:not(.detached) #scripts-split-view .scripts-debugger-show-hide-button,
+#-webkit-web-inspector.dock-to-right:not(.detached) #scripts-split-view .scripts-navigator-show-hide-button,
+#-webkit-web-inspector.dock-to-right:not(.detached) #scripts-debug-sidebar-resizer-widget {
     top: 70% !important;
     z-index: 20 !important;
 }
 
-#scripts-editor-container-tabbed-pane > .scripts-navigator-show-hide-button {
+#-webkit-web-inspector.dock-to-right:not(.detached) #scripts-editor-container-tabbed-pane > .scripts-navigator-show-hide-button {
     left: auto !important;
     right: 50% !important;
     margin-right: 20px !important;
 }
 
-#scripts-split-view .sidebar-overlay .navigator-tabbed-pane .scripts-navigator-show-hide-button {
+#-webkit-web-inspector.dock-to-right:not(.detached) #scripts-split-view .sidebar-overlay .navigator-tabbed-pane .scripts-navigator-show-hide-button {
     top: 0 !important;
 }
 
 
 
-/* 
- * Network panel 
+/*
+ * Network panel
  */
-#main-panels .network .split-view-sidebar-left {
+#-webkit-web-inspector.dock-to-right:not(.detached) .network .split-view-sidebar-left {
     position: static;
-	width: 100% !important;
-	height: 50% !important;
+    width: 100% !important;
+    height: 50% !important;
 }
 
-#main-panels .network .split-view-sidebar-left.maximized {
-	height: 100% !important;
+#-webkit-web-inspector.dock-to-right:not(.detached) .network .split-view-sidebar-left.maximized {
+    height: 100% !important;
 }
 
-#main-panels #network-views {
-	position: static;
-	left: 0 !important;
-	top: 50% !important;
-	width: 100%;
-	height: 50% !important;
+#-webkit-web-inspector.dock-to-right:not(.detached) #network-views {
+    position: static;
+    left: 0 !important;
+    top: 50% !important;
+    width: 100%;
+    height: 50% !important;
 }
