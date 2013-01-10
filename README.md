@@ -17,7 +17,7 @@ Installation:
 
 Find your Chrome's user stylesheets directory:
 
-- **Windows:** C:\Users\**Your Username**\AppData\Local\Google\Chrome\User Data\Default\User StyleSheets\
+- **Windows:** C:\Users\\{Your Username}\AppData\Local\Google\Chrome\User Data\Default\User StyleSheets\
 - **OSX:** ~/Library/Application Support/Google/Chrome/Default/User StyleSheets/
 - **Ubuntu (Chromium):** ~/.config/chromium/Default/User StyleSheets/
 
