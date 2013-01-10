@@ -1,11 +1,11 @@
-#-webkit-web-inspector .source-code {
+#-webkit-web-inspector .elements .source-code {
   left: auto;
 	right: auto;
 	width: 100% !important;
 	height: 50%;
 }
 
-#-webkit-web-inspector .split-view-sidebar-right {
+#-webkit-web-inspector .elements .split-view-sidebar-right {
 	left: auto;
 	right: auto;
 	width: 100% !important;
@@ -13,6 +13,6 @@
 	border-top: 1px solid #ccc;
 }
 
-#-webkit-web-inspector .split-view-contents {
+#-webkit-web-inspector .elements .split-view-contents {
 	position: static !important;
 }
