@@ -2,14 +2,14 @@
   left: auto;
 	right: auto;
 	width: 100% !important;
-	height: 50%;
+	height: 70%;
 }
 
 #-webkit-web-inspector .elements .split-view-sidebar-right {
 	left: auto;
 	right: auto;
 	width: 100% !important;
-	height: 50%;
+	height: 30%;
 	border-top: 1px solid #ccc;
 }
 
