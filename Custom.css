@@ -160,3 +160,24 @@
 #-webkit-web-inspector.dock-to-right:not(.detached) .profiles .split-view-resizer {
     display: none;
 }
+
+/* Dynamically-expanding split view in the Resources panel
+ * Idea credits: https://github.com/mauricelam/DockToRight/blob/c9e9425d50ddfe625831a34a3ea63d15d10b62b3/Custom.css#L244-L260 */
+#-webkit-web-inspector.dock-to-right:not(.detached) .resources .split-view-sidebar-left {
+    height: 30% !important;
+    z-index: 20;
+    -webkit-transition: 0.2s;
+}
+
+#-webkit-web-inspector.dock-to-right:not(.detached) .resources .split-view-sidebar-left:hover {
+    height: 50% !important;
+}
+
+#-webkit-web-inspector.dock-to-right:not(.detached) .resources .split-view-sidebar-left + .split-view-contents {
+    top: 20% !important;
+    -webkit-transition: 0.2s;
+}
+
+#-webkit-web-inspector.dock-to-right:not(.detached) .resources .split-view-sidebar-left:hover + .split-view-contents {
+    top: 50% !important;
+}
