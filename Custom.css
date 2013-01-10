@@ -122,19 +122,36 @@
 #-webkit-web-inspector.dock-to-right:not(.detached) .network .split-view-sidebar-left {
     position: static;
     width: 100% !important;
-    height: 50% !important;
+	height: 50% !important;
 }
 
-#-webkit-web-inspector.dock-to-right:not(.detached) .network .split-view-sidebar-left.maximized {
-    height: 100% !important;
+#-webkit-web-inspector.dock-to-right:not(.detached) #main-panels .network .split-view-sidebar-left.maximized {
+	height: 100% !important;
 }
 
-#-webkit-web-inspector.dock-to-right:not(.detached) #network-views {
-    position: static;
-    left: 0 !important;
-    top: 50% !important;
-    width: 100%;
-    height: 50% !important;
+#-webkit-web-inspector.dock-to-right:not(.detached) #main-panels #network-views {
+	position: static;
+	left: 0 !important;
+	top: 50% !important;
+	width: 100%;
+	height: 50% !important;
+}
+
+#-webkit-web-inspector.dock-to-right:not(.detached) #network-container .data-grid table.header col,
+#-webkit-web-inspector.dock-to-right:not(.detached) #network-container .data-grid table.data col {
+	display: block !important;
+	width: auto !important;
+}
+#-webkit-web-inspector.dock-to-right:not(.detached) #network-container .data-grid .data-grid-resizer {
+	display: block !important;
+}
+
+#-webkit-web-inspector.dock-to-right:not(.detached) #network-container .network-log-grid.data-grid td {
+	border-right: 1px solid #D2D2D2 !important;
+}
+
+#-webkit-web-inspector.dock-to-right:not(.detached) #network-container .data-grid th {
+	border-right: 1px solid #B3B3B3 !important;
 }
 
 
