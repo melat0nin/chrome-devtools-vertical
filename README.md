@@ -1,3 +1,6 @@
+**_chrome-devtools-vertical is no longer necessary -- vertical split has officially landed in [Chrome 27](http://blog.chromium.org/2013/04/chrome-27-beta-speedier-web-and-new.html)._**
+
+
 chrome-devtools-vertical
 ========================
 
